@@ -16,4 +16,5 @@
         - Left (Name, Description, Tags, Download CV)
         - Right (Images)
 
-    -
+    - Education
+        -
