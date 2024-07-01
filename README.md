@@ -3,8 +3,8 @@
 ## Sections
 
     - About Me
-    - Education
     - Skills
+    - Education
     - Experience
     - Projects
     - Contact

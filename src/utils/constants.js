@@ -1,18 +1,30 @@
 export const ICON_HTML_URL =
-  "https://abusaid.netlify.app/_next/static/media/html.017306fd.svg";
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg";
 export const ICON_CSS_URL =
-  "https://abusaid.netlify.app/_next/static/media/css.18a757c4.svg";
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg";
 export const ICON_JAVASCRIPT_URL =
-  "https://abusaid.netlify.app/_next/static/media/javascript.b181c09e.svg";
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg";
 export const ICON_REACT_URL =
-  "https://abusaid.netlify.app/_next/static/media/react.63480b3c.svg";
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg";
 export const ICON_TAILWINDCSS_URL =
-  "https://abusaid.netlify.app/_next/static/media/tailwind.0327ce72.svg";
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg";
+export const ICON_REDUX_URL =
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg";
 export const ICON_NODE_URL =
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg";
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg";
+export const ICON_EXPRESS_URL =
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg";
 export const ICON_MONGODB_URL =
-  "https://abusaid.netlify.app/_next/static/media/mongoDB.bdbfe282.svg";
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg";
+export const ICON_CPP_URL =
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg";
+export const ICON_SQL_URL =
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg";
 export const ICON_GIT_URL =
-  "https://abusaid.netlify.app/_next/static/media/git.50ce77c0.svg";
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg";
+export const ICON_GITHUB_URL =
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg";
+export const ICON_POSTMAN_URL =
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg";
 export const ICON_FIREBASE_URL =
-  "https://abusaid.netlify.app/_next/static/media/firebase.00a078b9.svg";
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg";

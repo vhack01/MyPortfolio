@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <div className="w-full fixed z-20 top-0 flex flex-col justify-center md:flex-row font-montserrat gap-x-8 items-center py-2">
+    <div className="w-full fixed z-50 top-0 flex flex-col justify-center md:flex-row font-montserrat gap-x-8 items-center py-2 bg-headerBg backdrop-blur-sm">
       <div className="font-Montagu text-xl text-white">
         {"<"} Vishwas {"/>"}
       </div>
