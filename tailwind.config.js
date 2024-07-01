@@ -22,6 +22,7 @@ module.exports = {
       },
       borderColor: {
         dark: "#3a3a3a",
+        dark2: "#3f3f4666",
       },
       textColor: {
         dark: "#2d2e32",

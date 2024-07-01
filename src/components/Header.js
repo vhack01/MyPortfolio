@@ -7,19 +7,16 @@ const Header = () => {
       <div className="bg-backgroundDark-0 text-gray-400 rounded-full px-4 p-2 border border-dark mt-3 md:mt-0">
         <ul className="flex items-center text-xs md:text-sm gap-x-4">
           <li className="cursor-pointer hover:text-white hover:rounded lg:px-4 py-1">
-            Home
+            <a href="#home">Home</a>
           </li>
           <li className="cursor-pointer hover:text-white hover:rounded lg:px-4 py-1">
-            Education
+            <a href="#skill">Skill</a>
           </li>
           <li className="cursor-pointer hover:text-white hover:rounded lg:px-4 py-1">
-            Skills
+            <a href="#education">Education</a>
           </li>
           <li className="cursor-pointer hover:text-white hover:rounded lg:px-4 py-1">
-            Experience
-          </li>
-          <li className="cursor-pointer hover:text-white hover:rounded lg:px-4 py-1">
-            Projects
+            <a href="#projects">Projects</a>
           </li>
           <li className="cursor-pointer hover:text-white hover:rounded lg:px-4 py-1">
             Contact

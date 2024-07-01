@@ -13,7 +13,7 @@ const About = () => {
   };
 
   return (
-    <div className="w-full bg-backgroundDark-0">
+    <div className="w-full bg-backgroundDark-0" id="home">
       <div className="w-[100%] border-red-400 md:w-[90%] lg:w-[80%] m-auto relative pt-20 flex flex-col md:flex-row md:justify-center">
         {/* LeftSide */}
         <div className="w-[100%] md:w-[60%] lg:w-[50%] font-Rubik md:py-20 xl:p-20 flex flex-col items-center md:items-start gap-y-8 py-4">

@@ -5,7 +5,6 @@
     - About Me
     - Skills
     - Education
-    - Experience
     - Projects
     - Contact
     - Footer
@@ -17,4 +16,6 @@
         - Right (Images)
 
     - Education
-        -
+        - Image
+        - B.Tech
+        - Higher Secondary school

@@ -16,6 +16,7 @@ import {
   ICON_SQL_URL,
   ICON_TAILWINDCSS_URL,
 } from "../utils/constants";
+import SubHeader from "./SubHeader";
 
 const Skill = () => {
   const skills = [
@@ -82,16 +83,11 @@ const Skill = () => {
   ];
 
   return (
-    <div className="w-full bg-backgroundDark-0">
+    <div className="w-full bg-backgroundDark-0" id="skill">
       {/* section */}
       <div className="w-[80%] m-auto py-10">
         {/* Skill header */}
-        <div className="w-full flex justify-center p-2 relative">
-          <div className="absolute w-full border border-dark top-8"></div>
-          <div className="text-white font-montserrat text-xl px-16 py-2 rounded-full z-20 bg-backgroundDark-0">
-            Skill
-          </div>
-        </div>
+        <SubHeader name={"Skills"} />
         {/* List */}
         <div className=" bg-skillBg rounded-md flex flex-wrap justify-center gap-5 mt-10 py-8">
           {skills.map((skill) => (
