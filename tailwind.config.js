@@ -12,6 +12,7 @@ module.exports = {
         backgroundDark: ["#2d2e32", "#121212"],
         headerBg: "#6e6e6e4f",
         iconDark: "#2d2e32",
+        iconDark2: "#27272a",
         skillBg: "#5c5c5c",
       },
       boxShadow: {
@@ -23,6 +24,7 @@ module.exports = {
       borderColor: {
         dark: "#3a3a3a",
         dark2: "#3f3f4666",
+        dark3: "#3f3f4680",
       },
       textColor: {
         dark: "#2d2e32",

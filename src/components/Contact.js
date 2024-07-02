@@ -1,19 +1,16 @@
-import { FaSchoolFlag } from "react-icons/fa6";
-import { IoSchoolSharp } from "react-icons/io5";
 import SubHeader from "./SubHeader";
 
-const Education = () => {
+const Contact = () => {
   return (
-    <div className="w-full bg-backgroundDark-0" id="education">
+    <div className="w-full bg-backgroundDark-0" id="projects">
       {/* section */}
       <div className="w-[80%] m-auto py-10">
-        {/* Education header */}
-        <SubHeader name="Education" />
-        {/* List */}
-        <div className="mt-10 flex flex-col gap-y-4 md:flex-row">
-          {/* left */}
-          <div className="w-12/12 md:w-1/2">
-            {/* <img src="https://abusaid.netlify.app/section.svg" alt="" /> */}
+        {/* Projects header */}
+        <SubHeader name="Contact Me" />
+
+        <div className="flex flex-col md:flex-row">
+          {/* Left */}
+          <div className="w-full md:w-1/2">
             <svg
               viewBox="0 0 1273 906"
               fill="none"
@@ -72,53 +69,55 @@ const Education = () => {
               </defs>
             </svg>
           </div>
-          {/* right */}
-          <div className="w-12/12 md:w-1/2 flex flex-col gap-y-4 font-montserrat">
-            <div className="border-2 border-gray-500 rounded-md flex gap-4 gap-x-6 p-4">
-              <div>
-                <IoSchoolSharp size={30} className="text-gray-200" />
-              </div>
-              <div className="w-full text-gray-100 flex flex-col gap-y-3">
-                <div className="flex items-center justify-between">
-                  <h1 className=" text-green-500 text-2xl font-bold">
-                    Bachloar of Technology
-                  </h1>
-                  <h1 className="text-gray-100 text-sm font-semibold">
-                    2021 - Present
-                  </h1>
+          {/* Right */}
+          <div className="w-full md:w-1/2">
+            <div className="border p-4 rounded border-dark">
+              <form className="flex flex-col gap-y-4">
+                <div className="flex flex-col">
+                  <label
+                    htmlFor="contact_name"
+                    className="text-gray-300 font-montserrat text-sm mb-1"
+                  >
+                    Your Name
+                  </label>
+                  <input
+                    type="text"
+                    id="contact_name"
+                    className="py-2 rounded indent-3 outline-none bg-backgroundDark-0 border border-gray-500 text-gray-200"
+                  />
                 </div>
-                <div className="text-sm">
-                  <h1 className="text-base">
-                    Lovely Professional University,{" "}
-                  </h1>
-                  <h1>Phagwara, Punjab </h1>
+                <div className="flex flex-col ">
+                  <label
+                    htmlFor="contact_email"
+                    className="text-gray-300 font-montserrat text-sm mb-1"
+                  >
+                    Your Email
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    id="contact_email"
+                    className="py-2 rounded indent-3 outline-none bg-backgroundDark-0 border border-gray-500 text-gray-200"
+                  />
                 </div>
-                <h1 className="text-sm">CGPA : 8.30</h1>
-              </div>
-            </div>
-
-            <div className="border-2 border-gray-500 rounded-md flex gap-4 gap-x-6 p-4">
-              <div>
-                <FaSchoolFlag size={30} className="text-gray-200" />
-              </div>
-              <div className="w-full text-gray-100 flex flex-col gap-y-3">
-                <div className="flex items-center justify-between">
-                  <h1 className=" text-green-500 text-2xl font-bold">
-                    Higher Secondary School
-                  </h1>
-                  <h1 className="text-gray-100 text-sm font-semibold">
-                    2018 - 2020
-                  </h1>
+                <div className="flex flex-col">
+                  <label
+                    htmlFor="contact_message"
+                    className="text-gray-300 font-montserrat mb-1 "
+                  >
+                    Your Message
+                  </label>
+                  <textarea
+                    id="contact_message"
+                    className="rounded p-2 outline-none bg-backgroundDark-0 border border-gray-500 text-gray-200"
+                  ></textarea>
                 </div>
-
-                <div className="text-sm">
-                  <h1 className="text-base">
-                    Maharana Pratap Education Center
-                  </h1>
-                  <h1>Kanpur, Uttar Pradesh </h1>
+                <div className="w-full flex justify-center py-2">
+                  <button className="w-full rounded text-white bg-green-500 p-2">
+                    Submit
+                  </button>
                 </div>
-                <h1>Percentage : 91%</h1>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -127,4 +126,4 @@ const Education = () => {
   );
 };
 
-export default Education;
+export default Contact;

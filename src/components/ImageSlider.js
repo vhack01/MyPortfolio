@@ -3,19 +3,19 @@ import SimpleImageSlider from "react-simple-image-slider";
 const ImageSlider = () => {
   const images = [
     {
-      url: "https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      url: "/assets/twitter_1.png",
     },
     {
-      url: "https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      url: "/assets/twitter_2.png",
     },
     {
-      url: "https://lumiere-a.akamaihd.net/v1/images/sa_pixar_virtualbg_coco_16x9_9ccd7110.jpeg?download=true",
+      url: "/assets/twitter_3.png",
     },
     {
-      url: "https://4kwallpapers.com/images/walls/thumbs_2t/8324.png",
+      url: "/assets/twitter_4.png",
     },
     {
-      url: "https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      url: "/assets/twitter_5.png",
     },
   ];
   return (
@@ -28,6 +28,7 @@ const ImageSlider = () => {
         showNavs={false}
         loop={true}
         autoPlay={true}
+        style={{ backgroundSize: "contain !important" }}
       />
     </div>
   );

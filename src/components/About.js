@@ -1,7 +1,7 @@
 import { TypeAnimation } from "react-type-animation";
-import IconCover from "./IconCover";
-import { FaDownload, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { SiLeetcode } from "react-icons/si";
+import { FaDownload } from "react-icons/fa";
+import Connect from "./Connect";
+
 const About = () => {
   const handleResumeDownload = () => {
     const anchor = document.createElement("a");
@@ -46,25 +46,7 @@ const About = () => {
           </div>
 
           {/* Icons */}
-          <div className="flex gap-x-4">
-            <IconCover
-              icon={<FaGithub className="" />}
-              link="https://github.com/vhack01"
-            />
-            <IconCover
-              icon={<FaLinkedin className="" />}
-              link="https://www.linkedin.com/in/vishwas-kumar1/"
-            />
-            <IconCover
-              icon={<FaTwitter className="" />}
-              link="https://x.com/vhacking_01"
-            />
-            <IconCover
-              icon={<SiLeetcode className="" />}
-              link="https://leetcode.com/u/vishwas__/"
-            />
-          </div>
-
+          <Connect />
           {/* Button */}
           <div className="">
             <button
