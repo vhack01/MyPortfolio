@@ -1,23 +1,6 @@
 import SimpleImageSlider from "react-simple-image-slider";
 
-const ImageSlider = () => {
-  const images = [
-    {
-      url: "/assets/twitter_1.png",
-    },
-    {
-      url: "/assets/twitter_2.png",
-    },
-    {
-      url: "/assets/twitter_3.png",
-    },
-    {
-      url: "/assets/twitter_4.png",
-    },
-    {
-      url: "/assets/twitter_5.png",
-    },
-  ];
+const ImageSlider = ({ images }) => {
   return (
     <div className="rounded-lg overflow-hidden relative shadow-iconShadow">
       <SimpleImageSlider

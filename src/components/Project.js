@@ -4,6 +4,58 @@ import IconCover from "./IconCover";
 import ImageSlider from "./ImageSlider";
 
 const Project = () => {
+  const project1 = [
+    {
+      url: "/assets/twitter_1.png",
+    },
+    {
+      url: "/assets/twitter_2.png",
+    },
+    {
+      url: "/assets/twitter_3.png",
+    },
+    {
+      url: "/assets/twitter_4.png",
+    },
+    {
+      url: "/assets/twitter_5.png",
+    },
+  ];
+  const project2 = [
+    {
+      url: "/assets/e-com/ecom_1.png",
+    },
+    {
+      url: "/assets/e-com/ecom_2.png",
+    },
+    {
+      url: "/assets/e-com/ecom_3.png",
+    },
+    {
+      url: "/assets/e-com/ecom_4.png",
+    },
+    {
+      url: "/assets/e-com/ecom_5.png",
+    },
+  ];
+  // const project3 = [
+  //   {
+  //     url: "/assets/netflix_1.png",
+  //   },
+  //   {
+  //     url: "/assets/netflix_2.png",
+  //   },
+  //   {
+  //     url: "/assets/netflix_3.png",
+  //   },
+  //   {
+  //     url: "/assets/netflix_4.png",
+  //   },
+  //   {
+  //     url: "/assets/netflix_5.png",
+  //   },
+  // ];
+
   return (
     <div className="w-full bg-backgroundDark-0" id="projects">
       {/* section */}
@@ -32,7 +84,7 @@ const Project = () => {
             </div>
             {/* ImageSlider */}
             <div className="flex justify-center md:justify-start p-2 my-4">
-              <ImageSlider />
+              <ImageSlider images={project1} />
             </div>
             <div>
               <h1 className="text-sm text-gray-300">Technologies used:</h1>
@@ -98,7 +150,7 @@ const Project = () => {
             </div>
             {/* ImageSlider */}
             <div className="flex justify-center md:justify-start p-2 my-4">
-              <ImageSlider />
+              <ImageSlider images={project2} />
             </div>
             <div>
               <h1 className="text-sm text-gray-300">Technologies used:</h1>
@@ -153,7 +205,7 @@ const Project = () => {
             </div>
             {/* ImageSlider */}
             <div className="flex justify-center md:justify-start p-2 my-4">
-              <ImageSlider />
+              <ImageSlider images={project1} />
             </div>
             <div>
               <h1 className="text-sm text-gray-300">Technologies used:</h1>
