@@ -2,6 +2,8 @@ import { FaGithub, FaLink } from "react-icons/fa";
 import SubHeader from "./SubHeader";
 import IconCover from "./IconCover";
 import ImageSlider from "./ImageSlider";
+import ReactPlayer from "react-player";
+import NotAvailable from "./NotAvailable";
 
 const Project = () => {
   const project1 = [
@@ -38,23 +40,20 @@ const Project = () => {
       url: "/assets/e-com/ecom_5.png",
     },
   ];
-  // const project3 = [
-  //   {
-  //     url: "/assets/netflix_1.png",
-  //   },
-  //   {
-  //     url: "/assets/netflix_2.png",
-  //   },
-  //   {
-  //     url: "/assets/netflix_3.png",
-  //   },
-  //   {
-  //     url: "/assets/netflix_4.png",
-  //   },
-  //   {
-  //     url: "/assets/netflix_5.png",
-  //   },
-  // ];
+  const project3 = [
+    {
+      url: "/assets/netflix/netflix_1.png",
+    },
+    {
+      url: "/assets/netflix/netflix_2.png",
+    },
+    {
+      url: "/assets/netflix/netflix_3.png",
+    },
+    {
+      url: "/assets/netflix/netflix_4.png",
+    },
+  ];
 
   return (
     <div className="w-full bg-backgroundDark-0" id="projects">
@@ -124,7 +123,15 @@ const Project = () => {
             </div>
           </div>
           {/* Video */}
-          <div className="w-full md:w-1/2">Video Section</div>
+          <div className="w-full md:w-1/2 aspect-video flex justify-center">
+            <div className="h-fit rounded-md overflow-hidden border border-dark p-0 ">
+              <ReactPlayer
+                url="/assets/Mini_Twitter.mp4"
+                controls={true}
+                width="100%"
+              />
+            </div>
+          </div>
         </div>
 
         {/* Proshop*/}
@@ -184,7 +191,15 @@ const Project = () => {
             </div>
           </div>
           {/* Video */}
-          <div className="w-full md:w-1/2">Video Section</div>
+          <div className="w-full md:w-1/2 aspect-video flex justify-center">
+            <div className="h-fit rounded-md overflow-hidden border border-dark p-0 ">
+              <ReactPlayer
+                url="/assets/Proshop.mp4"
+                controls={true}
+                width="100%"
+              />
+            </div>
+          </div>
         </div>
 
         {/* Project-3*/}
@@ -199,13 +214,13 @@ const Project = () => {
                 <IconCover icon={<FaLink className="" />} link="" />
                 <IconCover
                   icon={<FaGithub />}
-                  link="https://github.com/vhack01/Netflix-App"
+                  link="https://github.com/vhack01/NetflixGPT"
                 />
               </div>
             </div>
             {/* ImageSlider */}
             <div className="flex justify-center md:justify-start p-2 my-4">
-              <ImageSlider images={project1} />
+              <ImageSlider images={project3} />
             </div>
             <div>
               <h1 className="text-sm text-gray-300">Technologies used:</h1>
@@ -230,7 +245,9 @@ const Project = () => {
             </div>
           </div>
           {/* Video */}
-          <div className="w-full md:w-1/2">Video Section</div>
+          <div className="w-full md:w-1/2">
+            <NotAvailable />
+          </div>
         </div>
       </div>
     </div>
