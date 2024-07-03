@@ -126,7 +126,7 @@ const Project = () => {
           <div className="w-full md:w-1/2 aspect-video flex justify-center">
             <div className="h-fit rounded-md overflow-hidden border border-dark p-0 ">
               <ReactPlayer
-                url="/assets/Mini_Twitter.mp4"
+                url="https://res.cloudinary.com/dryvdqck7/video/upload/v1719984453/videos/Mini_Twitter_dgzbnf.mp4"
                 controls={true}
                 width="100%"
               />
@@ -194,7 +194,7 @@ const Project = () => {
           <div className="w-full md:w-1/2 aspect-video flex justify-center">
             <div className="h-fit rounded-md overflow-hidden border border-dark p-0 ">
               <ReactPlayer
-                url="/assets/Proshop.mp4"
+                url="https://res.cloudinary.com/dryvdqck7/video/upload/v1719984507/videos/Proshop_agcsdg.mp4"
                 controls={true}
                 width="100%"
               />
