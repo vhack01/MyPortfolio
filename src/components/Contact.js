@@ -2,7 +2,7 @@ import SubHeader from "./SubHeader";
 
 const Contact = () => {
   return (
-    <div className="w-full bg-backgroundDark-0" id="projects">
+    <div className="w-full bg-backgroundDark-0" id="contact">
       {/* section */}
       <div className="w-[80%] m-auto py-10">
         {/* Projects header */}
