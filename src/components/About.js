@@ -1,76 +1,193 @@
 import { TypeAnimation } from "react-type-animation";
 import { FaDownload } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
 import Connect from "./Connect";
 
 const About = () => {
   const handleResumeDownload = () => {
     const anchor = document.createElement("a");
     anchor.href = "/Vishwas_Resume.pdf";
-    anchor.download = "cv.pdf";
+    anchor.download = "Vishwas_Kumar_Resume.pdf";
     document.body.appendChild(anchor);
     anchor.click();
     document.body.removeChild(anchor);
   };
 
+  const stats = [
+    { value: "2+", label: "Years Exp" },
+    { value: "240M+", label: "Records Processed" },
+    { value: "3", label: "AI Agents Built" },
+    { value: "10+", label: "Microservices" },
+  ];
+
   return (
-    <div className="w-full bg-backgroundDark-0" id="home">
-      <div className="w-[100%] border-red-400 md:w-[90%] lg:w-[80%] m-auto relative pt-20 flex flex-col md:flex-row md:justify-center">
-        {/* LeftSide */}
-        <div className="w-[100%] md:w-[60%] lg:w-[50%] font-Rubik md:py-20 xl:p-20 flex flex-col items-center md:items-start gap-y-8 py-4">
-          <h1 className="text-4xl md:text-5xl text-white font-bold">
-            {" "}
-            {"Hello, I'm "}
-            <TypeAnimation
-              sequence={[
-                // Same substring at the start will only be typed once, initially
-                "Vishwas",
-                1000,
-                "vhack",
-                1000,
-              ]}
-              speed={30}
-              style={{
-                background: "-webkit-linear-gradient(#32ff47, #111)",
-                backgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-              repeat={Infinity}
-            />
-          </h1>
-          <div className="font-thin text-gray-200 font-montserrat flex flex-col items-center md:items-start gap-y-2 ">
-            <h1 className="text-xl md:text-2xl">Making the</h1>
-            <h1 className="text-2xl md:text-4xl">
-              Impossible <span className="font-bold">Possible.</span>
-            </h1>
-            <h1 className="text-xl md:text-2xl">Using 1's and 0's.</h1>
+    <section className="relative min-h-screen flex items-center" id="home">
+      <div className="max-w-7xl mx-auto px-6 pt-28 pb-20 w-full relative z-10">
+        {/* Top: Status line */}
+        <div className="flex items-center gap-3 mb-8 font-mono text-xs text-white/30">
+          <div className="pulse-dot" />
+          <span>system.status</span>
+          <span className="text-white/10">—</span>
+          <span className="text-cyber-green">ONLINE</span>
+          <span className="text-white/10">|</span>
+          <span>location: Hyderabad, IN</span>
+        </div>
+
+        {/* Main hero - 2 column */}
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
+          {/* Left: Text content */}
+          <div className="flex-1 flex flex-col gap-8">
+            {/* Name */}
+            <div>
+              <p className="font-mono text-xs text-cyber-green mb-3 tracking-widest uppercase">
+                {"// Software Engineer"}
+              </p>
+              <h1 className="text-5xl md:text-7xl font-bold font-sora leading-[1.1] tracking-tight">
+                <span className="text-white">Vishwas</span>
+                <br />
+                <span className="gradient-text-cyber">Kumar</span>
+              </h1>
+            </div>
+
+            {/* Terminal typing box */}
+            <div className="terminal-window max-w-lg">
+              <div className="terminal-header">
+                <div className="terminal-dot red" />
+                <div className="terminal-dot yellow" />
+                <div className="terminal-dot green" />
+                <span className="terminal-title">~/about-me</span>
+              </div>
+              <div className="terminal-body text-sm leading-relaxed">
+                <span className="text-cyber-green">❯ </span>
+                <span className="text-white/60">cat </span>
+                <span className="text-cyber-cyan">whoami.txt</span>
+                <div className="mt-3 text-white/50 leading-relaxed">
+                  Java Backend Developer building{" "}
+                  <span className="text-cyber-green">REST APIs</span>,{" "}
+                  <span className="text-cyber-cyan">microservices</span>, and{" "}
+                  <span className="text-cyber-yellow">real-time data pipelines</span>{" "}
+                  with Spring Boot, AWS & Kafka.
+                </div>
+                <div className="mt-4">
+                  <span className="text-cyber-green">❯ </span>
+                  <TypeAnimation
+                    sequence={[
+                      "building scalable systems_",
+                      2500,
+                      "shipping production code_",
+                      2500,
+                      "processing 240M+ records_",
+                      2500,
+                      "crafting AI agents_",
+                      2500,
+                    ]}
+                    speed={40}
+                    className="text-white/80"
+                    repeat={Infinity}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-3">
+              <button className="btn-cyber" onClick={handleResumeDownload}>
+                <FaDownload size={12} />
+                resume.pdf
+              </button>
+              <a href="#contact" className="btn-outline">
+                <FiMail size={14} />
+                say_hello()
+              </a>
+            </div>
+
+            {/* Social */}
+            <Connect />
           </div>
 
-          {/* Icons */}
-          <Connect />
-          {/* Button */}
-          <div className="">
-            <button
-              className="text-white rounded-full px-4 py-3 flex items-center gap-x-4 border border-gray-500 hover:border-gray-200"
-              onClick={handleResumeDownload}
-            >
-              <span>Download Resume</span>
-              <FaDownload />
-            </button>
+          {/* Right: Bento grid */}
+          <div className="w-full lg:w-[420px] flex flex-col gap-4">
+            {/* Profile photo card */}
+            <div className="bento-card flex items-center gap-5 p-5">
+              <div className="w-24 h-24 rounded-2xl overflow-hidden border border-white/10 flex-shrink-0 shadow-lg">
+                <img
+                  src="/vishwas_min.png"
+                  alt="Vishwas Kumar"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h3 className="text-white font-semibold text-lg">Vishwas Kumar</h3>
+                <p className="text-white/40 text-sm font-mono">
+                  @vhack01
+                </p>
+                <div className="flex items-center gap-2 mt-1.5">
+                  <div className="pulse-dot" style={{ width: 6, height: 6 }} />
+                  <span className="text-cyber-green text-xs font-mono">
+                    Open to work
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Stats bento grid */}
+            <div className="grid grid-cols-2 gap-4">
+              {stats.map((stat, idx) => (
+                <div key={idx} className="bento-card text-center py-5">
+                  <div className="text-2xl md:text-3xl font-bold font-sora gradient-text-cyber">
+                    {stat.value}
+                  </div>
+                  <div className="text-xs text-white/30 font-mono mt-1 uppercase tracking-wider">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Tech stack marquee */}
+            <div className="bento-card p-4 overflow-hidden">
+              <p className="text-xs text-white/20 font-mono mb-3 uppercase tracking-widest">
+                tech_stack
+              </p>
+              <div className="marquee-container">
+                <div className="marquee-content gap-3">
+                  {[
+                    "Java",
+                    "Spring Boot",
+                    "AWS",
+                    "Kafka",
+                    "PostgreSQL",
+                    "Redis",
+                    "Docker",
+                    "K8s",
+                    "Spark",
+                    "FastAPI",
+                    "Java",
+                    "Spring Boot",
+                    "AWS",
+                    "Kafka",
+                    "PostgreSQL",
+                    "Redis",
+                    "Docker",
+                    "K8s",
+                    "Spark",
+                    "FastAPI",
+                  ].map((tech, i) => (
+                    <span
+                      key={i}
+                      className="tag tag-green whitespace-nowrap"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* RightSide */}
-        <div className="w-full md:w-[40%] flex justify-center md:justify-start items-center pt-4">
-          <div className="h-32 w-32 md:w-60 md:h-60 lg:w-72 lg:h-72 rounded-full overflow-hidden">
-            <img
-              src="/profile_photo.jpg"
-              alt="banner"
-              className="w-full object-contain"
-            />
-          </div>
-        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

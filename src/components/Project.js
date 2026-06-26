@@ -1,256 +1,213 @@
-import { FaGithub, FaLink } from "react-icons/fa";
-import SubHeader from "./SubHeader";
-import IconCover from "./IconCover";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import useScrollReveal from "../hooks/useScrollReveal";
 import ImageSlider from "./ImageSlider";
 import ReactPlayer from "react-player";
-import NotAvailable from "./NotAvailable";
+
+const projects = [
+  {
+    num: "01",
+    title: "Mini Twitter",
+    description:
+      "Full-stack social platform with real-time feed, auth, rich media, follow system, and tweet interactions.",
+    tech: ["React", "Redux", "TailwindCSS", "Node.js", "Express", "MongoDB", "Cloudinary"],
+    liveUrl: "https://mini-twitter-app.vercel.app/",
+    githubUrl: "https://github.com/vhack01/Mini-Twitter",
+    images: [
+      { url: "/assets/twitter_1.png" },
+      { url: "/assets/twitter_2.png" },
+      { url: "/assets/twitter_3.png" },
+      { url: "/assets/twitter_4.png" },
+      { url: "/assets/twitter_5.png" },
+    ],
+    videoUrl:
+      "https://res.cloudinary.com/dryvdqck7/video/upload/v1719984453/videos/Mini_Twitter_dgzbnf.mp4",
+    color: "cyber-green",
+  },
+  {
+    num: "02",
+    title: "Proshop E-Commerce",
+    description:
+      "Feature-rich e-commerce with product catalog, reviews, cart, payment integration, and admin dashboard.",
+    tech: ["React", "Redux", "Node.js", "Express", "MongoDB"],
+    liveUrl: "https://vhack-ecom.onrender.com/",
+    githubUrl: "https://github.com/vhack01/e-com",
+    images: [
+      { url: "/assets/e-com/ecom_1.png" },
+      { url: "/assets/e-com/ecom_2.png" },
+      { url: "/assets/e-com/ecom_3.png" },
+      { url: "/assets/e-com/ecom_4.png" },
+      { url: "/assets/e-com/ecom_5.png" },
+    ],
+    videoUrl:
+      "https://res.cloudinary.com/dryvdqck7/video/upload/v1719984507/videos/Proshop_agcsdg.mp4",
+    color: "cyber-cyan",
+  },
+  {
+    num: "03",
+    title: "Netflix Clone",
+    description:
+      "Netflix-inspired streaming UI with Firebase auth, TMDB movie catalog, and responsive design.",
+    tech: ["React", "Firebase", "TMDB API", "CSS"],
+    liveUrl: null,
+    githubUrl: "https://github.com/vhack01/NetflixGPT",
+    images: [
+      { url: "/assets/netflix/netflix_1.png" },
+      { url: "/assets/netflix/netflix_2.png" },
+      { url: "/assets/netflix/netflix_3.png" },
+      { url: "/assets/netflix/netflix_4.png" },
+    ],
+    videoUrl: null,
+    color: "cyber-pink",
+  },
+];
+
+const colorMap = {
+  "cyber-green": {
+    text: "text-cyber-green",
+    border: "rgba(0, 255, 136, 0.15)",
+    glow: "rgba(0, 255, 136, 0.1)",
+    tagClass: "tag-green",
+  },
+  "cyber-cyan": {
+    text: "text-cyber-cyan",
+    border: "rgba(0, 212, 255, 0.15)",
+    glow: "rgba(0, 212, 255, 0.1)",
+    tagClass: "tag-cyan",
+  },
+  "cyber-pink": {
+    text: "text-cyber-pink",
+    border: "rgba(255, 0, 128, 0.15)",
+    glow: "rgba(255, 0, 128, 0.1)",
+    tagClass: "tag-pink",
+  },
+};
 
 const Project = () => {
-  const project1 = [
-    {
-      url: "/assets/twitter_1.png",
-    },
-    {
-      url: "/assets/twitter_2.png",
-    },
-    {
-      url: "/assets/twitter_3.png",
-    },
-    {
-      url: "/assets/twitter_4.png",
-    },
-    {
-      url: "/assets/twitter_5.png",
-    },
-  ];
-  const project2 = [
-    {
-      url: "/assets/e-com/ecom_1.png",
-    },
-    {
-      url: "/assets/e-com/ecom_2.png",
-    },
-    {
-      url: "/assets/e-com/ecom_3.png",
-    },
-    {
-      url: "/assets/e-com/ecom_4.png",
-    },
-    {
-      url: "/assets/e-com/ecom_5.png",
-    },
-  ];
-  const project3 = [
-    {
-      url: "/assets/netflix/netflix_1.png",
-    },
-    {
-      url: "/assets/netflix/netflix_2.png",
-    },
-    {
-      url: "/assets/netflix/netflix_3.png",
-    },
-    {
-      url: "/assets/netflix/netflix_4.png",
-    },
-  ];
+  const [ref, isVisible] = useScrollReveal(0.05);
 
   return (
-    <div className="w-full bg-backgroundDark-0" id="projects">
-      {/* section */}
-      <div className="w-[80%] m-auto py-10">
-        {/* Projects header */}
-        <SubHeader name="Projects" />
-        {/* List */}
-        {/* Mini Twitter */}
-        <div className="rounded-lg flex flex-col md:flex-row border-2 border-dark2 mt-10 p-4">
-          {/* Image and Links */}
-          <div className="w-full md:w-1/2 flex flex-col p-2">
-            <div className="flex justify-start">
-              <h1 className="font-montserrat font-bold text-3xl text-gray-100">
-                Mini Twitter
-              </h1>
-              <div className="flex gap-x-3 ml-6">
-                <IconCover
-                  icon={<FaLink />}
-                  link="https://mini-twitter-app.vercel.app/"
-                />
-                <IconCover
-                  icon={<FaGithub />}
-                  link="https://github.com/vhack01/Mini-Twitter"
-                />
-              </div>
-            </div>
-            {/* ImageSlider */}
-            <div className="flex justify-center md:justify-start p-2 my-4">
-              <ImageSlider images={project1} />
-            </div>
-            <div>
-              <h1 className="text-sm text-gray-300">Technologies used:</h1>
-              <div className="flex flex-wrap gap-2 p-2">
-                {/* Tech used */}
-                <div className="rounded text-gray-400 border border-gray-600 px-1 text-xs">
-                  HTML5
-                </div>
-                <div className="rounded text-gray-400 border border-gray-600 px-1 text-xs">
-                  CSS3
-                </div>
-                <div className="rounded text-gray-400 border border-gray-600 px-1 text-xs">
-                  Javascript
-                </div>
-                <div className="rounded text-gray-400 border border-gray-600 px-1 text-xs">
-                  ReactJs
-                </div>
-                <div className="rounded text-gray-400 border border-gray-600 px-1 text-xs">
-                  TailwindCSS
-                </div>
-                <div className="rounded text-gray-400 border border-gray-600 px-1 text-xs">
-                  Redux
-                </div>
-                <div className="rounded text-gray-400 border border-gray-600 px-1 text-xs">
-                  NodeJs
-                </div>
-                <div className="rounded text-gray-400 border border-gray-600 px-1 text-xs">
-                  ExpressJs
-                </div>
-                <div className="rounded text-gray-400 border border-gray-600 px-1 text-xs">
-                  MongoDB
-                </div>
-                <div className="rounded text-gray-400 border border-gray-600 px-1 text-xs">
-                  Cloudinary
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Video */}
-          <div className="w-full md:w-1/2 aspect-video flex justify-center">
-            <div className="h-fit rounded-md overflow-hidden border border-dark p-0 ">
-              <ReactPlayer
-                url="https://res.cloudinary.com/dryvdqck7/video/upload/v1719984453/videos/Mini_Twitter_dgzbnf.mp4"
-                controls={true}
-                width="100%"
-              />
-            </div>
-          </div>
+    <section className="relative py-24" id="projects">
+      <div className="section-sep" />
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Section header */}
+        <div className="mb-16">
+          <span className="font-mono text-xs text-cyber-green tracking-widest uppercase">
+            {"// 05"}
+          </span>
+          <h2 className="text-3xl md:text-5xl font-bold font-sora mt-2 text-white">
+            Featured Projects
+          </h2>
         </div>
 
-        {/* Proshop*/}
-        <div className="rounded-lg flex flex-col md:flex-row border-2 border-dark2 mt-10 p-4">
-          {/* Image and Links */}
-          <div className="w-full md:w-1/2 flex flex-col p-2">
-            <div className="flex justify-start">
-              <h1 className="font-montserrat font-bold text-3xl text-gray-100">
-                Proshop: Ecommerce
-              </h1>
-              <div>
-                <div className="flex gap-x-3 ml-6">
-                  <IconCover
-                    icon={<FaLink />}
-                    link="https://vhack-ecom.onrender.com/"
-                  />
-                  <IconCover
-                    icon={<FaGithub />}
-                    link="https://github.com/vhack01/e-com"
-                  />
-                </div>
-              </div>
-            </div>
-            {/* ImageSlider */}
-            <div className="flex justify-center md:justify-start p-2 my-4">
-              <ImageSlider images={project2} />
-            </div>
-            <div>
-              <h1 className="text-sm text-gray-300">Technologies used:</h1>
-              <div className="flex flex-wrap gap-2 p-2">
-                {/* Tech used */}
-                <div className="rounded text-gray-400 border border-gray-600 px-1 text-xs">
-                  HTML5
-                </div>
-                <div className="rounded text-gray-400 border border-gray-600 px-1 text-xs">
-                  CSS3
-                </div>
-                <div className="rounded text-gray-400 border border-gray-600 px-1 text-xs">
-                  Javascript
-                </div>
-                <div className="rounded text-gray-400 border border-gray-600 px-1 text-xs">
-                  ReactJs
-                </div>
-                <div className="rounded text-gray-400 border border-gray-600 px-1 text-xs">
-                  Redux
-                </div>
-                <div className="rounded text-gray-400 border border-gray-600 px-1 text-xs">
-                  NodeJs
-                </div>
-                <div className="rounded text-gray-400 border border-gray-600 px-1 text-xs">
-                  ExpressJs
-                </div>
-                <div className="rounded text-gray-400 border border-gray-600 px-1 text-xs">
-                  MongoDB
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Video */}
-          <div className="w-full md:w-1/2 aspect-video flex justify-center">
-            <div className="h-fit rounded-md overflow-hidden border border-dark p-0 ">
-              <ReactPlayer
-                url="https://res.cloudinary.com/dryvdqck7/video/upload/v1719984507/videos/Proshop_agcsdg.mp4"
-                controls={true}
-                width="100%"
-              />
-            </div>
-          </div>
-        </div>
+        <div
+          ref={ref}
+          className={`flex flex-col gap-16 reveal ${isVisible ? "visible" : ""}`}
+        >
+          {projects.map((project, idx) => {
+            const colors = colorMap[project.color];
+            const isReversed = idx % 2 === 1;
 
-        {/* Project-3*/}
-        <div className="rounded-lg flex flex-col md:flex-row border-2 border-dark2 mt-10 p-4">
-          {/* Image and Links */}
-          <div className="w-full md:w-1/2 flex flex-col p-2">
-            <div className="flex justify-start">
-              <h1 className="font-montserrat font-bold text-3xl text-gray-100">
-                Netflix Clone
-              </h1>
-              <div className="flex gap-x-3 ml-6">
-                <IconCover icon={<FaLink className="" />} link="" />
-                <IconCover
-                  icon={<FaGithub />}
-                  link="https://github.com/vhack01/NetflixGPT"
-                />
+            return (
+              <div
+                key={idx}
+                className="project-card"
+              >
+                <div
+                  className={`flex flex-col ${
+                    isReversed ? "lg:flex-row-reverse" : "lg:flex-row"
+                  } gap-0`}
+                >
+                  {/* Media side */}
+                  <div className="lg:w-[55%] relative bg-white/[0.01]">
+                    {/* Large project number */}
+                    <div className="project-number" style={{ color: 'transparent' }}>
+                      {project.num}
+                    </div>
+
+                    {project.videoUrl ? (
+                      <div className="aspect-video">
+                        <ReactPlayer
+                          url={project.videoUrl}
+                          controls={true}
+                          width="100%"
+                          height="100%"
+                        />
+                      </div>
+                    ) : (
+                      <div className="p-6">
+                        <ImageSlider images={project.images} />
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Info side */}
+                  <div className="lg:w-[45%] p-8 lg:p-10 flex flex-col justify-between gap-6">
+                    <div className="flex flex-col gap-5">
+                      {/* Number and title */}
+                      <div>
+                        <span
+                          className={`font-mono text-xs ${colors.text} opacity-60`}
+                        >
+                          project_{project.num}
+                        </span>
+                        <h3 className="text-2xl md:text-3xl font-bold text-white font-sora mt-1">
+                          {project.title}
+                        </h3>
+                      </div>
+
+                      {/* Description */}
+                      <p className="text-white/40 text-sm leading-relaxed">
+                        {project.description}
+                      </p>
+
+                      {/* Image slider (when video is present, show smaller slider) */}
+                      {project.videoUrl && (
+                        <div className="rounded-xl overflow-hidden border border-white/5">
+                          <ImageSlider images={project.images} />
+                        </div>
+                      )}
+
+                      {/* Tech tags */}
+                      <div className="flex flex-wrap gap-2">
+                        {project.tech.map((t, tIdx) => (
+                          <span key={tIdx} className={`tag ${colors.tagClass}`}>
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Links */}
+                    <div className="flex gap-3 pt-4 border-t border-white/5">
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn-cyber text-xs py-2 px-4"
+                        >
+                          <FaExternalLinkAlt size={10} />
+                          live_demo
+                        </a>
+                      )}
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-outline text-xs py-2 px-4"
+                      >
+                        <FaGithub size={14} />
+                        source_code
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            {/* ImageSlider */}
-            <div className="flex justify-center md:justify-start p-2 my-4">
-              <ImageSlider images={project3} />
-            </div>
-            <div>
-              <h1 className="text-sm text-gray-300">Technologies used:</h1>
-              <div className="flex flex-wrap gap-2 p-2">
-                {/* Tech used */}
-                <div className="rounded text-gray-400 border border-gray-600 px-1 text-xs">
-                  HTML5
-                </div>
-                <div className="rounded text-gray-400 border border-gray-600 px-1 text-xs">
-                  CSS3
-                </div>
-                <div className="rounded text-gray-400 border border-gray-600 px-1 text-xs">
-                  Javascript
-                </div>
-                <div className="rounded text-gray-400 border border-gray-600 px-1 text-xs">
-                  ReactJs
-                </div>
-                <div className="rounded text-gray-400 border border-gray-600 px-1 text-xs">
-                  Firebase
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Video */}
-          <div className="w-full md:w-1/2">
-            <NotAvailable />
-          </div>
+            );
+          })}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
